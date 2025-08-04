@@ -9,6 +9,35 @@ import fnmatch
 import argparse
 from pathlib import Path
 
+import subprocess
+import platform
+import ctypes
+
+def is_admin():
+    if platform.system() != "Windows":
+        return False
+    try:
+        return ctypes.windll.shell32.IsUserAnAdmin()
+    except:
+        return False
+
+def check_git_longpaths():
+    if platform.system() == "Windows":
+        try:
+            output = subprocess.check_output(["git", "config", "--system", "core.longpaths"], stderr=subprocess.STDOUT)
+            if output.strip().lower() != b"true":
+                if not is_admin():
+                    print("\n⚠️  Warning: Git 'core.longpaths' is not enabled.")
+                    print("👉 Run this command in an Administrator shell:")
+                    print("   git config --system core.longpaths true\n")
+        except subprocess.CalledProcessError:
+            print("\n⚠️  Warning: Could not check git longpaths setting.")
+            print("👉 You may want to run:")
+            print("   git config --system core.longpaths true\n")
+
+# Call this early in your script
+check_git_longpaths()
+
 # ----------------- Config -------------------
 
 GIT_FILTER_REPO_URL = "https://raw.githubusercontent.com/newren/git-filter-repo/main/git-filter-repo"
