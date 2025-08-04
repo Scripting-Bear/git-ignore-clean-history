@@ -1,6 +1,6 @@
 {
   "name": "@scripting-bear/git-ignore-clean-history",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "🧹 Remove previously committed files that should have been ignored via .gitignore — interactively and safely.",
   "bin": {
     "git-ignore-clean-history": "cli.js"
@@ -13,7 +13,9 @@
   "files": [
     "cli.js",
     "lib/",
-    "README.md"
+    "README.md",
+    "clean_git_history_step_by_step.py",
+    "requirements.txt"
   ],
   "keywords": [
     "git",
@@ -40,7 +42,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/scripting-bear/git-ignore-clean-history.git"
+    "url": "git+https://github.com/scripting-bear/git-ignore-clean-history.git"
   },
   "bugs": {
     "url": "https://github.com/scripting-bear/git-ignore-clean-history/issues"
