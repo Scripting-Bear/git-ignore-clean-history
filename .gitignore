@@ -1,0 +1,26 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dist/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Python support (optional, since you're wrapping Python)
+__pycache__/
+*.pyc
+*.pyo
+
+# Mac/Linux file cruft
+*.swp
+*~

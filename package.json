@@ -1,0 +1,54 @@
+{
+  "name": "@scripting-bear/git-ignore-clean-history",
+  "version": "1.0.1",
+  "description": "🧹 Remove previously committed files that should have been ignored via .gitignore — interactively and safely.",
+  "bin": {
+    "git-ignore-clean-history": "cli.js"
+  },
+  "main": "cli.js",
+  "scripts": {
+    "start": "node cli.js",
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+  "files": [
+    "cli.js",
+    "lib/",
+    "README.md"
+  ],
+  "keywords": [
+    "git",
+    "history",
+    "clean",
+    "gitignore",
+    "filter-repo",
+    "bfg",
+    "repo-clean",
+    "remove-history",
+    "interactive",
+    "npx"
+  ],
+  "author": {
+    "name": "scripting-bear",
+    "url": "https://github.com/scripting-bear"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=14"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scripting-bear/git-ignore-clean-history.git"
+  },
+  "bugs": {
+    "url": "https://github.com/scripting-bear/git-ignore-clean-history/issues"
+  },
+  "homepage": "https://github.com/scripting-bear/git-ignore-clean-history#readme",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "inquirer": "^9.0.0",
+    "minimist": "^1.2.8"
+  }
+}
