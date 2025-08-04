@@ -1,6 +1,6 @@
 {
   "name": "@scripting-bear/git-ignore-clean-history",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "🧹 Remove previously committed files that should have been ignored via .gitignore — interactively and safely.",
   "bin": {
     "git-ignore-clean-history": "cli.js"
